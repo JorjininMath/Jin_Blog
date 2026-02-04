@@ -9,6 +9,9 @@ export type WeeklyEntry = {
   tags: string[];
   highlights: string[];
   reflections: string[];
+  /** 本周计划 / to-do */
+  thisWeekPlans?: string[];
+  /** 下周计划 */
   plans: string[];
   events: { time: string; title: string; detail: string; tags: string[] }[];
   relatedArticles: string[];

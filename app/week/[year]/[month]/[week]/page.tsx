@@ -69,14 +69,27 @@ export default function WeeklyPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="glass-card p-6">
-        <p className="section-title">Next Week</p>
-        <ul className="mt-4 space-y-2 text-sm text-mist">
-          {entry.plans.map((item) => (
-            <li key={item}>• {item}</li>
-          ))}
-        </ul>
-      </section>
+      {entry.thisWeekPlans && entry.thisWeekPlans.length > 0 ? (
+        <section className="glass-card p-6">
+          <p className="section-title">This Week</p>
+          <ul className="mt-4 space-y-2 text-sm text-mist">
+            {entry.thisWeekPlans.map((item) => (
+              <li key={item}>• {item}</li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
+      {entry.plans.length > 0 ? (
+        <section className="glass-card p-6">
+          <p className="section-title">Next Week</p>
+          <ul className="mt-4 space-y-2 text-sm text-mist">
+            {entry.plans.map((item) => (
+              <li key={item}>• {item}</li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
 
       {entry.relatedArticles.length > 0 ? (
         <section className="glass-card p-6">
