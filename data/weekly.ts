@@ -12,7 +12,12 @@ export const weeklyEntries: WeeklyEntry[] = [
     tags: ["review/weekly", "tech/frontend", "life/routine"],
     highlights: ["博客上线 Vercel，SSH 与 GitHub 配置完成", "确定 2026 年周记更新节奏"],
     reflections: ["内容产出需要更稳定的时间块", "把周记当作每周固定复盘入口"],
-    plans: ["保持每周一篇周记更新", "补充 2 月计划与目标"],
+    plans: [
+      "持续投递简历并积极跟进求职机会",
+      "完成本学期助教工作与批改任务",
+      "完成 CKME-CP 论文撰写与修改",
+      "启动一个 LLM 相关的小型 Demo 项目"
+    ],
     events: [
       {
         time: "Sat",
@@ -28,33 +33,5 @@ export const weeklyEntries: WeeklyEntry[] = [
       }
     ],
     relatedArticles: ["design-year-month-week-system"]
-  },
-  {
-    id: "2026-01-w4",
-    title: "2026 年 01 月 · 第 4 周",
-    year: 2026,
-    month: 1,
-    week: 4,
-    dateRange: "01/27 - 02/02",
-    summary: "一月的最后一周，收尾与规划并行。",
-    tags: ["review/weekly", "strategy/planning"],
-    highlights: ["完成年度目标拆解", "博客项目收尾与上线准备"],
-    reflections: ["节奏比强度重要"],
-    plans: ["二月坚持周记更新", "整理标签与搜索体验"],
-    events: [
-      {
-        time: "Mon",
-        title: "年度目标拆解",
-        detail: "把 2026 年目标拆到季度与月度。",
-        tags: ["strategy/planning"]
-      },
-      {
-        time: "Fri",
-        title: "博客上线准备",
-        detail: "检查部署与内容，准备正式对外。",
-        tags: ["tech/frontend"]
-      }
-    ],
-    relatedArticles: []
   }
 ];
