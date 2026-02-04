@@ -18,21 +18,14 @@ export const weeklyEntries: WeeklyEntry[] = [
       "完成 CKME-CP 论文撰写与修改",
       "启动一个 LLM 相关的小型 Demo 项目"
     ],
-    thisWeekJobSummary:
-      "本周求职进展将在此更新。可写投递数量、面试安排、跟进状态等简短总结。",
     plans: [],
     events: [
       {
-        time: "Sat",
-        title: "博客部署与配置",
-        detail: "完成 Vercel 部署、SSH 密钥与 GitHub 关联。",
-        tags: ["tech/frontend"]
-      },
-      {
-        time: "Sun",
-        title: "内容时间线更新",
-        detail: "将周记时间线更新至 2026 年 2 月第 1 周。",
-        tags: ["review/weekly"]
+        time: "This Week",
+        title: "Job Situation",
+        detail:
+          "本周求职进展将在此更新。可写投递数量、面试安排、跟进状态等简短总结。",
+        tags: ["job"]
       }
     ],
     relatedArticles: ["design-year-month-week-system"]
