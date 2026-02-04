@@ -1,5 +1,7 @@
 # Jin Blog
 
+By [JorjininMath](https://github.com/JorjininMath)
+
 一个面向公开展示的个人博客，主打「年-月-周」事件记录，同时支持复盘、观点文章、标签与搜索，整体视觉参考 Apple 官网的简洁科技风格。
 
 - 结构化记录（Year → Month → Week）

@@ -2,6 +2,11 @@
   "name": "jin-blog",
   "version": "0.1.0",
   "private": true,
+  "author": "JorjininMath",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JorjininMath/Jin_Blog"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
