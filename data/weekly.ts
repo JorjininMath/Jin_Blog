@@ -18,6 +18,8 @@ export const weeklyEntries: WeeklyEntry[] = [
       "完成 CKME-CP 论文撰写与修改",
       "启动一个 LLM 相关的小型 Demo 项目"
     ],
+    thisWeekJobSummary:
+      "本周求职进展将在此更新。可写投递数量、面试安排、跟进状态等简短总结。",
     plans: [],
     events: [
       {

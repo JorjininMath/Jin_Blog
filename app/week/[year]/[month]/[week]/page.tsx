@@ -80,6 +80,15 @@ export default function WeeklyPage({ params }: PageProps) {
         </section>
       ) : null}
 
+      {entry.thisWeekJobSummary ? (
+        <section className="glass-card p-6">
+          <p className="section-title">Job Situation This Week</p>
+          <p className="mt-4 whitespace-pre-line text-sm leading-relaxed text-mist">
+            {entry.thisWeekJobSummary}
+          </p>
+        </section>
+      ) : null}
+
       {entry.plans.length > 0 ? (
         <section className="glass-card p-6">
           <p className="section-title">Next Week</p>

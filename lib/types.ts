@@ -11,6 +11,8 @@ export type WeeklyEntry = {
   reflections: string[];
   /** 本周计划 / to-do */
   thisWeekPlans?: string[];
+  /** 本周求职进展（简短总结） */
+  thisWeekJobSummary?: string;
   /** 下周计划 */
   plans: string[];
   events: { time: string; title: string; detail: string; tags: string[] }[];
