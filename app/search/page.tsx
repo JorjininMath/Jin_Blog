@@ -24,7 +24,7 @@ export default function SearchPage() {
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="输入关键词，例如: review / Apple / 周记"
-          className="w-full rounded-xl border border-white/10 bg-ink px-4 py-3 text-sm text-white placeholder:text-mist focus:border-glow focus:outline-none"
+          className="w-full rounded-xl border border-black/[0.08] bg-graphite/50 px-4 py-3 text-sm text-ink placeholder:text-mist focus:border-glow focus:outline-none focus:ring-1 focus:ring-glow"
         />
       </div>
 
@@ -38,7 +38,7 @@ export default function SearchPage() {
               <div key={entry.id} className="glass-card p-5">
                 <Link
                   href={`/week/${entry.year}/${entry.month}/${entry.week}`}
-                  className="text-lg font-semibold"
+                  className="text-lg font-semibold text-ink transition hover:text-glow"
                 >
                   {entry.title}
                 </Link>
@@ -64,7 +64,7 @@ export default function SearchPage() {
               <div key={article.slug} className="glass-card p-5">
                 <Link
                   href={`/article/${article.slug}`}
-                  className="text-lg font-semibold"
+                  className="text-lg font-semibold text-ink transition hover:text-glow"
                 >
                   {article.title}
                 </Link>

@@ -53,7 +53,7 @@ export default function WeeklyPage({ params }: PageProps) {
         <p className="section-title">Events</p>
         <div className="mt-4 space-y-4">
           {entry.events.map((event) => (
-            <div key={event.title} className="rounded-xl border border-white/5 p-4">
+            <div key={event.title} className="rounded-xl border border-black/[0.08] bg-white/50 p-4">
               <p className="text-xs uppercase tracking-[0.2em] text-mist">
                 {event.time}
               </p>
@@ -86,7 +86,7 @@ export default function WeeklyPage({ params }: PageProps) {
               const article = getArticle(slug);
               if (!article) return null;
               return (
-                <div key={slug} className="rounded-xl border border-white/5 p-4">
+                <div key={slug} className="rounded-xl border border-black/[0.08] bg-white/50 p-4">
                   <h3 className="text-lg font-semibold">{article.title}</h3>
                   <p className="mt-2 text-sm text-mist">{article.summary}</p>
                 </div>

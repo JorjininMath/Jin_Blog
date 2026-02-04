@@ -27,7 +27,7 @@ export default function ArticlesPage() {
               </div>
               <Link
                 href={`/article/${article.slug}`}
-                className="rounded-full border border-white/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-mist transition hover:border-glow hover:text-white"
+                className="rounded-full bg-ink px-4 py-2 text-xs font-medium uppercase tracking-wider text-white transition hover:opacity-90"
               >
                 Read
               </Link>

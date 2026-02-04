@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="zh">
       <body>
-        <div className="min-h-screen bg-ink">
+        <div className="min-h-screen bg-white">
           <Header />
           <main className="container-shell py-12">{children}</main>
           <Footer />

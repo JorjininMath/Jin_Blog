@@ -3,26 +3,28 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
-  @apply bg-ink text-white antialiased;
-  font-feature-settings: "ss01", "ss02";
+  @apply bg-white text-ink antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", "Helvetica Neue", sans-serif;
 }
 
 ::selection {
-  background: rgba(90, 103, 216, 0.45);
+  background: rgba(0, 113, 227, 0.2);
 }
 
 .container-shell {
-  @apply mx-auto max-w-6xl px-6 lg:px-10;
+  @apply mx-auto max-w-5xl px-6 lg:px-12;
 }
 
+/* Apple 风格：少边框、多留白，用浅灰区分区块 */
 .glass-card {
-  @apply rounded-2xl border border-white/5 bg-graphite/80 shadow-soft;
+  @apply rounded-2xl bg-graphite/60;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .section-title {
-  @apply text-xs uppercase tracking-[0.3em] text-mist;
+  @apply text-xs font-medium uppercase tracking-widest text-mist;
 }
