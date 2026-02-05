@@ -31,6 +31,6 @@ export const weeklyEntries: WeeklyEntry[] = [
         tags: ["job"]
       }
     ],
-    relatedArticles: ["design-year-month-week-system"]
+    relatedArticles: ["llamaindex-pr-contribution-experience", "design-year-month-week-system"]
   }
 ];
