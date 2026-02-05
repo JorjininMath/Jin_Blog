@@ -79,6 +79,32 @@ export default function SearchPage() {
           </div>
         )}
       </section>
+
+      <section className="space-y-4">
+        <h3 className="text-lg font-semibold">AI Learning 结果</h3>
+        {results.aiLearning.length === 0 ? (
+          <p className="text-sm text-mist">暂无匹配 AI 学习记录。</p>
+        ) : (
+          <div className="grid gap-4">
+            {results.aiLearning.map((entry) => (
+              <div key={entry.slug} className="glass-card p-5">
+                <Link
+                  href={`/ai-learning/${entry.slug}`}
+                  className="text-lg font-semibold text-ink transition hover:text-glow"
+                >
+                  {entry.title}
+                </Link>
+                <p className="mt-2 text-sm text-mist">{entry.summary}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {entry.tags.map((tag) => (
+                    <TagPill key={tag} tag={tag} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
     </div>
   );
 }

@@ -8,7 +8,7 @@ type PageProps = {
 
 export default function TagDetailPage({ params }: PageProps) {
   const tag = decodeURIComponent(params.tag);
-  const { weekly, articles } = filterByTag(tag);
+  const { weekly, articles, aiLearning } = filterByTag(tag);
 
   return (
     <div className="space-y-10">
@@ -16,7 +16,7 @@ export default function TagDetailPage({ params }: PageProps) {
         <p className="section-title">Tag</p>
         <h2 className="mt-2 text-2xl font-semibold">#{tag}</h2>
         <p className="mt-3 text-sm text-mist">
-          与该标签相关的周记与文章。
+          与该标签相关的周记、文章与 AI 学习记录。
         </p>
       </header>
 
@@ -64,6 +64,32 @@ export default function TagDetailPage({ params }: PageProps) {
                 <div className="mt-3 flex flex-wrap gap-2">
                   {article.tags.map((articleTag) => (
                     <TagPill key={articleTag} tag={articleTag} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
+
+      <section className="space-y-4">
+        <h3 className="text-lg font-semibold">AI Learning</h3>
+        {!aiLearning || aiLearning.length === 0 ? (
+          <p className="text-sm text-mist">暂无 AI 学习记录。</p>
+        ) : (
+          <div className="grid gap-4">
+            {aiLearning.map((entry) => (
+              <div key={entry.slug} className="glass-card p-5">
+                <Link
+                  href={`/ai-learning/${entry.slug}`}
+                  className="text-lg font-semibold"
+                >
+                  {entry.title}
+                </Link>
+                <p className="mt-2 text-sm text-mist">{entry.summary}</p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {entry.tags.map((t) => (
+                    <TagPill key={t} tag={t} />
                   ))}
                 </div>
               </div>

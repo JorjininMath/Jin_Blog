@@ -3,6 +3,7 @@ import Link from "next/link";
 const navLinks = [
   { href: "/", label: "Timeline" },
   { href: "/articles", label: "Articles" },
+  { href: "/ai-learning", label: "AI Learning" },
   { href: "/tags", label: "Tags" },
   { href: "/search", label: "Search" },
 ];

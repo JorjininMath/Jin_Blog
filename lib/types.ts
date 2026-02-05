@@ -26,3 +26,14 @@ export type Article = {
   readingTime: string;
   content: string[];
 };
+
+export type AILearningEntry = {
+  slug: string;
+  title: string;
+  date: string;
+  topic: string;
+  summary: string;
+  tags: string[];
+  resources?: { label: string; url: string }[];
+  content: string[];
+};
