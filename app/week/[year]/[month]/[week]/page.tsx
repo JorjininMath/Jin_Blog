@@ -58,7 +58,7 @@ export default function WeeklyPage({ params }: PageProps) {
                 {event.time}
               </p>
               <h3 className="mt-2 text-lg font-semibold">{event.title}</h3>
-              <p className="mt-2 text-sm text-mist">{event.detail}</p>
+              <p className="mt-2 whitespace-pre-line text-sm text-mist">{event.detail}</p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {event.tags.map((tag) => (
                   <TagPill key={tag} tag={tag} />

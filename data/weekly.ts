@@ -23,8 +23,11 @@ export const weeklyEntries: WeeklyEntry[] = [
       {
         time: "This Week",
         title: "Job Situation",
-        detail:
-          "本周求职进展将在此更新。可写投递数量、面试安排、跟进状态等简短总结。",
+        detail: `Applied this week (2):
+
+• Uber — Graduate 2026 PhD Scientist II, Operations Research or ML (Mobility and Delivery Tech), US. Under review; may reach out if background meets staffing needs.
+
+• Lila Sciences — Operations Research Scientist I/II, Robotics. Application submitted. Mission: scientific superintelligence. Team will review; will be in touch if experience aligns. CEO: Geoff von Maltzahn.`,
         tags: ["job"]
       }
     ],
