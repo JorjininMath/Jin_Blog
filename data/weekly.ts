@@ -23,11 +23,15 @@ export const weeklyEntries: WeeklyEntry[] = [
       {
         time: "This Week",
         title: "Job Situation",
-        detail: `Applied this week (2):
+        detail: `Applied this week (4):
 
 • Uber — Graduate 2026 PhD Scientist II, Operations Research or ML (Mobility and Delivery Tech), US. Under review; may reach out if background meets staffing needs.
 
-• Lila Sciences — Operations Research Scientist I/II, Robotics. Application submitted. Mission: scientific superintelligence. Team will review; will be in touch if experience aligns. CEO: Geoff von Maltzahn.`,
+• Lila Sciences — Operations Research Scientist I/II, Robotics. Application submitted. Mission: scientific superintelligence. Team will review; will be in touch if experience aligns. CEO: Geoff von Maltzahn.
+
+• ByteDance — Machine Learning Engineer Graduate (E-Commerce Risk Control) - 2026 Start (PhD), San Jose. 简历筛选. 通过内推投递. Submitted 2026-02-07.
+
+• ByteDance — Machine Learning Engineer Graduate (E-Commerce Supply Chain & Logistics) - 2026 Start (PhD), San Jose. 简历筛选. 通过内推投递. Submitted 2026-02-07.`,
         tags: ["job"]
       }
     ],
