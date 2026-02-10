@@ -2,6 +2,24 @@ import { AILearningEntry } from "@/lib/types";
 
 export const aiLearningEntries: AILearningEntry[] = [
   {
+    slug: "search-only-rag-engineering-review",
+    title: "Search-Only RAG 系统：检索层工程化实践复盘",
+    date: "2026-02-10",
+    topic: "RAG / Retrieval Engineering",
+    summary:
+      "通过构建一个纯检索 Search-Only RAG 系统，验证在完全解耦生成层的前提下，检索工程优化能把 Top-k 准确度提升到什么水平。",
+    tags: ["ai/llm", "ai/rag", "tech/search"],
+    content: [
+      "为了排查 RAG 系统中“生成层掩盖检索缺陷”的问题，这次实验将检索与生成完全解耦，构建了一个只返回原始证据的 Search-Only 系统。目标是验证：在不引入 LLM 的情况下，仅靠检索侧的工程化优化（检索策略 + 重排逻辑），可以把 Top-k 的命中效果做到什么程度。",
+      "数据上，为保证可复现且合规，选择 Hugging Face 上的 Amazon Reviews 数据集，通过 datasets 的 streaming 模式提取 asin、title、text、rating 等字段，统一清洗为本地 JSONL，首批约 5000 条评论，覆盖多品类，保证检索空间有一定复杂度。",
+      "系统分为离线索引与在线检索两部分。离线阶段使用 sentence-transformers/all-MiniLM-L6-v2 做向量化，并在本地构建 FAISS 索引并持久化，避免重复计算。在线阶段采用两阶段检索：先用向量相似度做基础召回（3×top_k 候选），再基于 Query 意图进行意图感知重排。",
+      "意图感知重排是这次工程化的核心：当 Query 带有 Negative 意图（如“缺点”“避雷”）时，对低评分（1–2 星）评论给予权重补偿；当识别到 Compare 意图时，强制执行 ASIN 多样化过滤，避免 Top-k 被单一商品垄断；General 场景下则保留原始余弦相似度排序。",
+      "评测方面，为量化改进效果，设计了 Hit@1 / Hit@3 / Hit@5 以及 Avg Best Rank 等指标，并对 10 组手工标注的 Golden Queries 做对比实验。结果显示：Hit@3 从 0.50 提升到 0.80，提升约 60%；Avg Best Rank 从 1.44 降到 1.11，约 23% 的优化，并且 Compare 意图的命中从基本失败变为稳定命中。",
+      "从 rerank_report.json 的分析可以看到，意图路由帮助将原本排在第 3–5 位的正确证据推到了 Top-1，在横向对比场景下，Metadata 过滤有效缓解了“向量检索只召回同一商品大量相似评论”的问题。不过也暴露出两点问题：基于关键词的意图识别在长难句下容易失效，以及短内容评论在向量空间中不如长文稳定，需要考虑长度归一化或额外特征。",
+      "整体结论是：RAG 的上限很大程度上取决于检索层。即使不引入 LLM，通过细化意图路由和结构化重排，也能显著提升特定业务场景下的表现。先把检索层做到可控、可解释，再叠加生成层，是更稳健的一条工程路径。后续计划包括：引入更复杂的语义重排模型（如 Cross-Encoder）、支持多轮对话下的 Query 改写，以及探索只把 LLM 作为总结层接入并对比幻觉率变化。"
+    ]
+  },
+  {
     slug: "llamaindex-pr-contribution-experience",
     title: "技术实录：LlamaIndex 开源贡献全流程（从 Fork 到 Review）",
     date: "2026-02-05",
@@ -28,7 +46,10 @@ export const aiLearningEntries: AILearningEntry[] = [
     summary: "梳理大模型基本概念与 prompt 设计思路，为后续 demo 打基础。",
     tags: ["ai/llm", "ai/prompting"],
     resources: [
-      { label: "OpenAI Prompt Engineering Guide", url: "https://platform.openai.com/docs/guides/prompt-engineering" }
+      {
+        label: "OpenAI Prompt Engineering Guide",
+        url: "https://platform.openai.com/docs/guides/prompt-engineering"
+      }
     ],
     content: [
       "LLM 的输入输出形式与 token 概念。",

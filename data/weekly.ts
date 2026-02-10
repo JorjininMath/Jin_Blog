@@ -36,5 +36,39 @@ export const weeklyEntries: WeeklyEntry[] = [
       }
     ],
     relatedArticles: ["design-year-month-week-system"]
+  },
+  {
+    id: "2026-02-w2",
+    title: "2026 年 02 月 · 第 2 周",
+    year: 2026,
+    month: 2,
+    week: 2,
+    dateRange: "02/08 - 02/14",
+    summary: "聚焦 Search-Only RAG 实验，总结检索层工程化优化与评测体系。",
+    tags: ["review/weekly", "ai/rag", "tech/search"],
+    highlights: [
+      "完成 Search-Only RAG 系统首轮实验与评测",
+      "梳理检索层工程化模式与意图感知重排逻辑"
+    ],
+    reflections: [
+      "RAG 的上限更多受限于检索而非生成，需要优先把检索层打磨扎实",
+      "规则式意图识别在复杂语句下存在边界，需要考虑轻量模型接入"
+    ],
+    thisWeekPlans: [
+      "整理 Search-Only RAG 实验文档并抽象为可复用模式",
+      "设计下一步基于 Cross-Encoder 的重排方案",
+      "继续维护本周求职节奏与反馈跟进"
+    ],
+    plans: [],
+    events: [
+      {
+        time: "This Week",
+        title: "Search-Only RAG 实验完成",
+        detail:
+          "构建纯检索 Search-Only RAG 系统，采用两阶段检索（向量基础召回 + 意图感知重排），并在 Amazon Reviews 数据上完成 Hit@N 与 Avg Best Rank 等指标评测。",
+        tags: ["ai/rag", "tech/search"]
+      }
+    ],
+    relatedArticles: []
   }
 ];
