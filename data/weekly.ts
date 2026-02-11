@@ -55,12 +55,25 @@ export const weeklyEntries: WeeklyEntry[] = [
       "规则式意图识别在复杂语句下存在边界，需要考虑轻量模型接入"
     ],
     thisWeekPlans: [
+      "TA：完成 SSD 期中加考排程与监考安排（2/18 前完成）",
       "整理 Search-Only RAG 实验文档并抽象为可复用模式",
       "设计下一步基于 Cross-Encoder 的重排方案",
       "继续维护本周求职节奏与反馈跟进"
     ],
     plans: [],
     events: [
+      {
+        time: "This Week",
+        title: "TA: SSD 期中加考排程（Esra）",
+        detail: `任务概要：为 5 名 SSD 学生安排期中替代考场（正考 2/24 课内）。需在 2/18 前完成。
+• 提出一个 2 小时时段（非正课时间），自任监考。
+• 通过 HUB 预订教室（Durham 122 或 222）。
+• 发邮件通知 SSD 学生时间地点，请其确认或反馈冲突。
+• 若有冲突则加开场次并预订教室与监考。
+• 在 OneDrive 学生名单中更新每人考试日期、时间、教室。
+• 完成后将每位学生的考试时间与地点汇总邮件给 Esra。`,
+        tags: ["ta", "life/routine"]
+      },
       {
         time: "This Week",
         title: "Search-Only RAG 实验完成",
