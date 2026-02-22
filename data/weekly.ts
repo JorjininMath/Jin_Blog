@@ -106,52 +106,60 @@ export const weeklyEntries: WeeklyEntry[] = [
     events: [
       {
         time: "This Week",
-        title: "Proposal meeting paper — reviewer-response checklist",
-        detail: `Section-by-section revision checklist (Priority: A=must-fix, B=strongly suggested, C=polish).
+        title: "Proposal meeting paper — CKME-CP revision checklist (v2)",
+        detail: `Legend: ✅ done · 🟡 partially done · ❌ not done
 
---- 0. Global consistency and claims (do first) ---
-[A0] Align claimed coverage target with data/design: state clearly (i) random X~P_X marginal coverage, or (ii) fixed test design/grid. One explicit sentence in preliminaries/method; experiments use same target.
-[A1] Resolve “designed Stage-2 calibration (X)” vs exchangeability: add paragraph — choose one: (1) calibration X from same P_X as test, (2) coverage conditional on fixed test design, (3) weighted/covariate-shift conformal. Theorem/claim and experiments no longer in tension.
+------- 0. Global consistency and claims -------
+[A0] Coverage target aligned with design: ✅ Regime-wise marginal coverage stated; calibration/test (X) i.i.d. from same strategy-induced input distribution.
+[A1] Designed Stage-2 (X) vs exchangeability resolved: ✅ Regime-wise exchangeability/validity framing; theorem/claims consistent with experiments.
 
---- 1. Introduction ---
-[B1] Split contributions (2–4 bullets): CKME conditional CDF + surrogate/smoothing + error decomposition; DCP interval by CDF inversion; two-stage budget and sampling. Tie each to a section.
-[C1] Scope: one sentence — 1D experiments now; higher-dim discussed later.
+------- 1. Introduction -------
+[B1] Contributions split and mapped to sections: ✅ "Threefold" contributions clear and section-aligned.
+[C1] Scope statement (1D now; higher-dim later): 🟡 1D in experiments section; explicit scope sentence in Intro still weak/missing.
 
---- 2. Problem setup / Preliminaries ---
-[A2] Define exchangeability where first used: augmented sample exchangeable ⇒ joint distribution invariant to permutations (split conformal rank).
-[A3] Define target set and output: full set / smallest interval covering it / central connected component; match implementation and metrics.
+------- 2. Problem setup / Preliminaries -------
+[A2] Define exchangeability at first use: ✅ Definition where split conformal is introduced.
+[A3] Define target set/output and match implementation: 🟡 Set/interval matches implementation via grid endpoints; "which component / central connected / smallest interval" wording could be more explicit.
 
---- 3. Conditional CDF via CKME ---
-[A4] State kernels and RKHS: specify k_X, k_Y (e.g. bounded, characteristic), normalization.
-[A5] Surrogate g_{t,h}: lemma/remark — in H_Y or approximation with bound; how constants depend on h.
-[B2] Numerical monotonicity: implementation note — rearrangement/isotonic on t-grid, or quantify violations and handling.
+------- 3. Conditional CDF via CKME -------
+[A4] Kernels + RKHS assumptions stated clearly: 🟡 Bounded-kernel in theory; clean "kernel choice + bounded/characteristic/normalization" in methods not fully centralized.
+[A5] Surrogate (g_{t,h}) membership/bound: 🟡 Uniform RKHS bound (Assumption 1) and (h)-dependence discussed; no lemma/remark for logistic surrogate in H_Y (or approximation) yet.
+[B2] Numerical monotonicity handling (rearrangement/isotonic or report violations): ❌ No monotonicity-enforcement note or violation quantification yet.
 
---- 4. DCP construction ---
-[A6] Exact calibration score S_i and split quantile rule (finite-sample corrected if used).
-[A7] Inversion: t-grid definition and range; how endpoints computed; interpolation between grid points.
-[B3] Why score yields central interval: |F-1/2|≤q and relation to quantiles.
+------- 4. DCP construction -------
+[A6] Calibration score + split quantile rule: ✅ Score S_i and finite-sample corrected quantile rule explicit.
+[A7] Inversion implementation details (grid, range, endpoints, interpolation): 🟡 Grid inversion and endpoint selection present; grid range rule + interpolation between grid points not fully described.
+[B3] Why score yields a central interval: 🟡 Intuition present; short "centrality ↔ quantile band" explanation not fully spelled out.
 
---- 5. Two-stage procedure ---
-[A8] Algorithm 2: make three Stage-2 strategies explicit — LHS; score-proportional p_diag(x)∝S^(0)(x); mixture p_γ. Remove unused symbols.
-[A9] Define score S^(0)(x): definition, intuition (uncertainty/miscalibration proxy), how computed from preliminary CDF.
-[B4] Budget equation: total budget in terms of (n_0,r_0), (n_1,r_1), Stage-2 allocation.
+------- 5. Two-stage procedure -------
+[A8] Algorithm 2 makes 3 Stage-2 strategies explicit: ✅ LHS / diagnostic-weighted / mixture clear; unused symbols removed.
+[A9] Define diagnostic S^(0)(x) (formal definition + computation): 🟡 Concept/intuition (uncertainty proxy) stated; exact formula used in experiments should be written explicitly.
+[B4] Budget equation and comparability: 🟡 B_1=n_0 r_0, B_2=n_1 r_1 appear; single clean "total budget + allocation + baseline matching" statement still missing.
 
---- 6. Theory ---
-[A10] Theorem 1: cite primary CKME result + conditions (bounded kernels, regularization scaling).
-[A11] Decomposition: CKME error (x); surrogate smoothing bias (h); grid/discretization (m). Each term has an order and a knob.
-[A12] Coverage guarantee matches calibration design (see A1); no over-claiming.
-[B5] Remark: better F̂ reduces conformal inflation / tightens bands.
+------- 6. Theory -------
+[A10] Cite primary CKME result + conditions: 🟡 Theorem clean; direct citation to core CKME consistency at Thm 1 would strengthen.
+[A11] Error decomposition (CKME + smoothing (h) + grid (m)): ✅ All three terms with knobs/orders.
+[A12] Coverage guarantee matches calibration design: ✅ Validity consistent with regime-wise exchangeability.
+[B5] Remark: better F̂ tightens bands (reduces inflation): 🟡 Mentioned intuitively; not a clean theory remark yet.
 
---- 7. Experiments ---
-[A13] Train/cal/test split and what is exchangeable; replication protocol.
-[A14] Exp1 undercoverage diagnosis: monotonicity violation rate; PIT histogram F̂(Y|X); sensitivity to h, grid (table/figure, can be appendix).
-[B6] Parameter tuning: CV objective (CRPS / CDF error / MMD), folds, Stage-1 only.
-[B7] Baselines: comparable budget and tuning; state explicitly.
-[C2] Report std/CI across macro-reps for coverage and width.
+------- 7. Experiments -------
+[A13] Split/train/cal/test + exchangeability + replication protocol: 🟡 Splits described; macro-rep protocol (what is re-drawn each rep, counts) should be one paragraph.
+[A14] Undercoverage diagnostics (monotonicity rate, PIT histogram, sensitivity to h, grid): 🟡 Appendix has score vs interval coverage + grid-size effect; PIT/monotonicity-rate and explicit (h)-sensitivity still missing.
+[B6] Parameter tuning details (objective, folds, Stage-1 only): 🟡 Candidate grids/losses listed; fold structure and "tune only on Stage-1" should be stated procedurally.
+[B7] Baselines fairness (budget + tuning): 🟡 Baselines described; "same total budget + tuning protocol" needs explicit statement.
+[C2] Report variability across macro-reps (std/CI): ❌ Tables show means only; add std/CI or error bars.
 
---- 8. Discussion / Limitations / Future ---
-[A15] Limitation: designed calibration covariates; calibration/test covariate mismatch; how you plan to address.
-[B8] Future (4–6 items): validity under covariate shift / adaptive design; monotone CDF (rearrangement/isotonic); tail-aware tuning; two-stage efficiency theory; scalable CKME (Nyström) and higher-dim X; group-conditional worst-bin coverage.
+------- 8. Discussion / Limitations / Future -------
+[A15] Limitation: designed calibration covariates / mismatch risk: 🟡 Discussed implicitly; one crisp limitation sentence + planned fix direction still needed.
+[B8] Future items (4–6): 🟡 Some present; still missing/weak: covariate-shift conformal validity, monotone CDF enforcement, tail-aware tuning, two-stage efficiency theory, scalable CKME (Nyström), worst-bin/group-conditional coverage.
+
+------- Biggest remaining work (short) -------
+❌ [B2] Monotonicity enforcement/violation report
+🟡 [A9] Formal definition of S^(0)(x)
+🟡 [A7] Grid range + interpolation details
+🟡 [A13] Replication protocol paragraph
+❌ [C2] Add std/CI across macro-reps
+🟡 [A15] One explicit limitation sentence
 
 Response format when fixing: Reviewer comment → Response: “We clarified…” → Change made: “Added in Sec. X, lines …; updated Algorithm 2; …”`,
         tags: ["research/ckme-cp", "review/paper"]
