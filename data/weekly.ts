@@ -166,5 +166,53 @@ Response format when fixing: Reviewer comment → Response: “We clarified…�
       }
     ],
     relatedArticles: []
+  },
+  {
+    id: "2026-02-w4",
+    title: "2026 年 02 月 · 第 4 周",
+    year: 2026,
+    month: 2,
+    week: 4,
+    dateRange: "02/22 - 02/28",
+    summary: "求职持续、委员会进度会确认、CKME-CP 条件覆盖与高维收敛整理、AI 学习 GRPO/RLVR、TA 监考与杂项。",
+    tags: ["review/weekly", "research/ckme-cp", "ai/llm", "ta", "job", "life/routine"],
+    highlights: [],
+    reflections: [],
+    thisWeekPlans: [
+      "求职：持续投递与跟进，在本周 Job Situation 中记录新申请与状态",
+      "与 committee 确认 progress meeting 时间与形式",
+      "研究：CKME-CP 条件覆盖（conditional coverage）；回顾高维收敛课题，规划 journal 稿",
+      "AI 学习：GRPO 与 RLVR",
+      "杂项：与 Hyunwoo 确认 INFORMS 网站账号变更；监考 SSD 期中 Wed/Fri；正常期中 Tue 9:30–10:45"
+    ],
+    plans: [],
+    events: [
+      {
+        time: "This Week",
+        title: "Job Situation",
+        detail: `Ongoing job search. Record new applications and outcomes below (same format as previous weeks: company — role, location, status, date).
+
+• (Add entries as you apply.)`,
+        tags: ["job"]
+      },
+      {
+        time: "This Week",
+        title: "Committee & Research & Other",
+        detail: `Committee: Confirm with committee members about progress meeting (time + format).
+
+Research:
+• CKME-CP: Look at conditional coverage next.
+• Convergence in high dimension: Revisit previous topic, plan wrap-up as journal paper.
+
+AI learning: GRPO and RLVR.
+
+Other:
+• Check with Hyunwoo about INFORMS website account change.
+• Proctor SSD midterm: Wed + Fri (per scheduled sessions).
+• Normal midterm exam: Tue 9:30–10:45.`,
+        tags: ["research/ckme-cp", "ai/llm", "ta", "life/routine"]
+      }
+    ],
+    relatedArticles: []
   }
 ];
