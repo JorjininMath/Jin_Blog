@@ -197,20 +197,29 @@ Response format when fixing: Reviewer comment → Response: “We clarified…�
       },
       {
         time: "This Week",
-        title: "Committee & Research & Other",
-        detail: `Committee: Confirm with committee members about progress meeting (time + format).
-
-Research:
-• CKME-CP: Look at conditional coverage next.
-• Convergence in high dimension: Revisit previous topic, plan wrap-up as journal paper.
-
-AI learning: GRPO and RLVR.
+        title: "Committee progress meeting",
+        detail: `Confirm with committee members about progress meeting (availability, time, format, and high-level agenda).`,
+        tags: ["research/ckme-cp", "committee"]
+      },
+      {
+        time: "This Week",
+        title: "Research focus",
+        detail: `CKME-CP: Look at conditional coverage next.
+Convergence in high dimension: revisit previous work and plan to wrap it up as a journal paper.`,
+        tags: ["research/ckme-cp"]
+      },
+      {
+        time: "This Week",
+        title: "AI learning & other tasks",
+        detail: `AI learning:
+• GRPO
+• RLVR
 
 Other:
 • Check with Hyunwoo about INFORMS website account change.
 • Proctor SSD midterm: Wed + Fri (per scheduled sessions).
 • Normal midterm exam: Tue 9:30–10:45.`,
-        tags: ["research/ckme-cp", "ai/llm", "ta", "life/routine"]
+        tags: ["ai/llm", "ta", "life/routine"]
       }
     ],
     relatedArticles: []
