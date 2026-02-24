@@ -72,6 +72,8 @@ export const weeklyEntries: WeeklyEntry[] = [
 • Feb 27 (Thu) 9:00–11:00am — Durham 222
 
 待办：
+• 制作与正考不同的新版本试卷（new version diff with original exam）。
+• 在 Canvas 上为 SSD 学生创建 assignment（发布考试时间、地点与试卷/说明）。
 • 在 Canvas 上创建对应考试活动（两场时间与 Dur 222）。
 • 考前提醒：在考试日前发邮件/公告提醒 SSD 学生时间与地点。`,
         tags: ["ta", "life/routine"]
