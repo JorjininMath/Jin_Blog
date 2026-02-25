@@ -6,6 +6,33 @@ type PageProps = {
   params: { year: string; month: string; week: string };
 };
 
+const renderDetail = (detail: string) => {
+  const regex = /(~~.*?~~)/g;
+  const parts: (string | JSX.Element)[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+
+  while ((match = regex.exec(detail)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(detail.slice(lastIndex, match.index));
+    }
+    const content = match[0].slice(2, -2);
+    parts.push(
+      <span key={key++} className="line-through opacity-60">
+        {content}
+      </span>
+    );
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < detail.length) {
+    parts.push(detail.slice(lastIndex));
+  }
+
+  return parts;
+};
+
 export default function WeeklyPage({ params }: PageProps) {
   const year = Number(params.year);
   const month = Number(params.month);
@@ -58,7 +85,9 @@ export default function WeeklyPage({ params }: PageProps) {
                 {event.time}
               </p>
               <h3 className="mt-2 text-lg font-semibold">{event.title}</h3>
-              <p className="mt-2 whitespace-pre-line text-sm text-mist">{event.detail}</p>
+              <p className="mt-2 whitespace-pre-line text-sm text-mist">
+                {renderDetail(event.detail)}
+              </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {event.tags.map((tag) => (
                   <TagPill key={tag} tag={tag} />
