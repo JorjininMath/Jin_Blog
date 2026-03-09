@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const navLinks = [
   { href: "/", label: "Timeline" },
+  { href: "/okr", label: "OKR" },
   { href: "/articles", label: "Articles" },
   { href: "/ai-learning", label: "AI Learning" },
   { href: "/tags", label: "Tags" },

@@ -37,3 +37,39 @@ export type AILearningEntry = {
   resources?: { label: string; url: string }[];
   content: string[];
 };
+
+export type OKRStatus = "not_started" | "on_track" | "at_risk" | "done";
+
+export type KRScore = 0 | 0.3 | 0.7 | 1;
+
+export type KRProgressEntry = {
+  weekId: string;
+  score: KRScore;
+  note?: string;
+};
+
+export type KeyResult = {
+  id: string;
+  title: string;
+  metric: string;
+  target: string;
+  current: string;
+  status: OKRStatus;
+  progress: KRProgressEntry[];
+};
+
+export type Objective = {
+  id: string;
+  title: string;
+  why: string;
+  keyResults: KeyResult[];
+};
+
+export type MonthlyOKR = {
+  id: string;
+  year: number;
+  month: number;
+  theme: string;
+  objectives: Objective[];
+  nonOkrOps?: string[];
+};
