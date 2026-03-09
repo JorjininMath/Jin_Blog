@@ -32,7 +32,7 @@ export const weeklyEntries: WeeklyEntry[] = [
 • ByteDance — Machine Learning Engineer Graduate (E-Commerce Risk Control) - 2026 Start (PhD), San Jose. 简历筛选. 通过内推投递. Submitted 2026-02-07.
 
 • ByteDance — Machine Learning Engineer Graduate (E-Commerce Supply Chain & Logistics) - 2026 Start (PhD), San Jose. 简历筛选. 通过内推投递. Submitted 2026-02-07.`,
-        tags: ["job"]
+        tags: ["life/job"]
       }
     ],
     relatedArticles: ["design-year-month-week-system"]
@@ -76,7 +76,7 @@ export const weeklyEntries: WeeklyEntry[] = [
 • ~~在 Canvas 上为 SSD 学生创建 assignment（发布考试时间、地点与试卷/说明）。~~
 • 在 Canvas 上创建对应考试活动（两场时间与 Dur 222）。
 • 考前提醒：在考试日前发邮件/公告提醒 SSD 学生时间与地点。`,
-        tags: ["ta", "life/routine"]
+        tags: ["life/ta", "life/routine"]
       },
       {
         time: "This Week",
@@ -177,7 +177,7 @@ Response format when fixing: Reviewer comment → Response: “We clarified…�
     week: 4,
     dateRange: "02/22 - 02/28",
     summary: "求职持续、委员会进度会确认、CKME-CP 条件覆盖与高维收敛整理、AI 学习 GRPO/RLVR、TA 监考与杂项。",
-    tags: ["review/weekly", "research/ckme-cp", "ai/llm", "ta", "job", "life/routine"],
+    tags: ["review/weekly", "research/ckme-cp", "ai/llm", "life/ta", "life/job", "life/routine"],
     highlights: [],
     reflections: [],
     thisWeekPlans: [
@@ -185,7 +185,8 @@ Response format when fixing: Reviewer comment → Response: “We clarified…�
       "与 committee 确认 progress meeting 时间与形式",
       "研究：CKME-CP 条件覆盖（conditional coverage）；回顾高维收敛课题，规划 journal 稿",
       "AI 学习：GRPO 与 RLVR",
-      "杂项：与 Hyunwoo 确认 INFORMS 网站账号变更；监考 SSD 期中 Wed/Fri；正常期中 Tue 9:30–10:45"
+      "杂项：与 Hyunwoo 确认 INFORMS 网站账号变更；监考 SSD 期中 Wed/Fri；正常期中 Tue 9:30–10:45",
+      "周末前完成期中考试批改（finish grading Midterm Exam in weekend）"
     ],
     plans: [],
     events: [
@@ -195,13 +196,13 @@ Response format when fixing: Reviewer comment → Response: “We clarified…�
         detail: `Ongoing job search. Record new applications and outcomes below (same format as previous weeks: company — role, location, status, date).
 
 • (Add entries as you apply.)`,
-        tags: ["job"]
+        tags: ["life/job"]
       },
       {
         time: "This Week",
         title: "Committee progress meeting",
-        detail: `Confirm with committee members about progress meeting (availability, time, format, and high-level agenda).`,
-        tags: ["research/ckme-cp", "committee"]
+        detail: `【已完成】~~Confirm with committee members about progress meeting (availability, time, format, and high-level agenda).~~`,
+        tags: ["research/ckme-cp", "academic/committee"]
       },
       {
         time: "This Week",
@@ -219,9 +220,44 @@ Convergence in high dimension: revisit previous work and plan to wrap it up as a
 
 Other:
 • Check with Hyunwoo about INFORMS website account change.
-• Proctor SSD midterm: Wed + Fri (per scheduled sessions).
-• Normal midterm exam: Tue 9:30–10:45.`,
-        tags: ["ai/llm", "ta", "life/routine"]
+• ~~Proctor SSD midterm: Wed + Fri (per scheduled sessions).~~
+• Normal midterm exam: Tue 9:30–10:45.
+• 待办：周末前完成期中考试批改（finish grading Midterm Exam in weekend）.`,
+        tags: ["ai/llm", "life/ta", "life/routine"]
+      }
+    ],
+    relatedArticles: []
+  },
+  {
+    id: "2026-03-w1",
+    title: "2026 年 03 月 · 第 1 周",
+    year: 2026,
+    month: 3,
+    week: 1,
+    dateRange: "03/01 - 03/07",
+    summary: "CKME-CP：CDF 一致性实验、条件覆盖推进与向刘老师汇报 slides；高维 SK 收敛：是否增补实验及方向。",
+    tags: ["review/weekly", "research/ckme-cp", "academic/committee"],
+    highlights: [],
+    reflections: [],
+    thisWeekPlans: [
+      "CKME-CP：CDF 一致性实验；条件覆盖深入；整理当前进展为向刘老师汇报的 slides",
+      "高维 SK 收敛：评估是否增加实验，若增加则明确方向"
+    ],
+    plans: [],
+    events: [
+      {
+        time: "This Week",
+        title: "CKME-CP research",
+        detail: `1.a Experiments about CKME CDF consistency.
+1.b Conditional coverage: investigate and push forward.
+1.c Summarize what we have done so far as slides for presentation to Dr. Liu.`,
+        tags: ["research/ckme-cp", "academic/committee"]
+      },
+      {
+        time: "This Week",
+        title: "SK convergence in high dimension",
+        detail: `2.a Think about whether to add experiments; if yes, decide the direction (e.g. what to vary, what to measure).`,
+        tags: ["research/ckme-cp"]
       }
     ],
     relatedArticles: []
