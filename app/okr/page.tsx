@@ -5,14 +5,16 @@ const statusLabelMap: Record<OKRStatus, string> = {
   not_started: "Not Started",
   on_track: "On Track",
   at_risk: "At Risk",
-  done: "Done"
+  done: "Done",
+  completed: "Completed"
 };
 
 const statusClassMap: Record<OKRStatus, string> = {
   not_started: "bg-graphite text-mist",
   on_track: "bg-blue-100 text-blue-700",
   at_risk: "bg-amber-100 text-amber-700",
-  done: "bg-emerald-100 text-emerald-700"
+  done: "bg-emerald-100 text-emerald-700",
+  completed: "bg-emerald-100 text-emerald-700"
 };
 
 export default function OkrPage() {

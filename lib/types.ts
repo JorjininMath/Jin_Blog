@@ -38,9 +38,14 @@ export type AILearningEntry = {
   content: string[];
 };
 
-export type OKRStatus = "not_started" | "on_track" | "at_risk" | "done";
+export type OKRStatus =
+  | "not_started"
+  | "on_track"
+  | "at_risk"
+  | "done"
+  | "completed";
 
-export type KRScore = 0 | 0.3 | 0.7 | 1;
+export type KRScore = 0 | 0.3 | 0.5 | 0.7 | 1;
 
 export type KRProgressEntry = {
   weekId: string;
