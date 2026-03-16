@@ -87,9 +87,15 @@ export const monthlyOKRs: MonthlyOKR[] = [
             title: "获取实质性招聘进展",
             metric: "Meaningful pipeline events",
             target: ">= 3 (OA/interview/HR call)",
-            current: "0/3",
-            status: "not_started",
-            progress: []
+            current: "1/3",
+            status: "on_track",
+            progress: [
+              {
+                weekId: "2026-03-w2",
+                score: 0.33,
+                note: "Completed interview with Zhiyuan (3.12); reviewed sensor noise handling, multi-objective optimization, and RAG project deep-dives."
+              }
+            ]
           }
         ]
       },
@@ -103,22 +109,33 @@ export const monthlyOKRs: MonthlyOKR[] = [
             title: "发布 AI 学习或技术复盘",
             metric: "Posts published",
             target: ">= 2",
-            current: "0/2",
-            status: "not_started",
-            progress: []
+            current: "2/2",
+            status: "completed",
+            progress: [
+              {
+                weekId: "2026-03-w2",
+                score: 1.0,
+                note: "Published '从 Shape 到 Stride：为什么转置后 Tensor 会变成 Non-Contiguous?' (3.9); finished AI learning articles for 01 project (3.10). Target met."
+              }
+            ]
           },
           {
             id: "o3-kr2",
             title: "每周周记按时更新",
             metric: "Weekly notes coverage",
             target: "4/4 weeks in March",
-            current: "1/4",
+            current: "2/4",
             status: "on_track",
             progress: [
               {
                 weekId: "2026-03-w1",
                 score: 0.3,
                 note: "March week 1 note published."
+              },
+              {
+                weekId: "2026-03-w2",
+                score: 0.5,
+                note: "Week 2 note published covering midterm grading, AI learning articles, and interview prep."
               }
             ]
           },
@@ -127,13 +144,18 @@ export const monthlyOKRs: MonthlyOKR[] = [
             title: "每周完成一次复盘并写下周 Top 3",
             metric: "Weekly review sessions",
             target: ">= 4",
-            current: "1/4",
+            current: "2/4",
             status: "on_track",
             progress: [
               {
                 weekId: "2026-03-w1",
                 score: 0.3,
                 note: "Weekly reflection captured with next actions."
+              },
+              {
+                weekId: "2026-03-w2",
+                score: 0.5,
+                note: "Reviewed week completions against OKR; identified O1 research gap, strong O3 delivery."
               }
             ]
           }

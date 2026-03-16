@@ -261,5 +261,70 @@ Other:
       }
     ],
     relatedArticles: []
+  },
+  {
+    id: "2026-03-w2",
+    title: "2026 年 03 月 · 第 2 周",
+    year: 2026,
+    month: 3,
+    week: 2,
+    dateRange: "03/08 - 03/14",
+    summary: "AI 学习文章产出完成月度目标；助教批改收尾；求职漏斗首个实质进展。研究主线本周空窗，下周需补上。",
+    tags: ["review/weekly", "ai/learning", "life/job", "academic/ta"],
+    highlights: [
+      "发布「从 Shape 到 Stride：为什么转置后 Tensor 会变成 Non-Contiguous?」",
+      "完成 AI 学习 01 项目全部文章",
+      "完成 Zhiyuan 面试，深度复盘传感器噪声、多目标优化与 RAG 项目"
+    ],
+    reflections: [
+      "O3 内容产出超预期，3 月 AI 文章目标提前完成",
+      "助教批改占用了大量时间，CKME-CP 研究本周零进展",
+      "求职管道有了第一个实质事件，需保持节奏"
+    ],
+    thisWeekPlans: [
+      "CKME-CP：补上上周欠账，推进 CDF 一致性实验或 slides",
+      "投递简历，建立稳定的每周跟进节奏",
+      "完成本周周记并更新 OKR 进度"
+    ],
+    plans: [],
+    events: [
+      {
+        time: "03/09",
+        title: "完成期中考试批改",
+        detail: "助教工作收尾，批改期中试卷。",
+        tags: ["academic/ta"]
+      },
+      {
+        time: "03/09",
+        title: "发布 AI 学习文章",
+        detail: "「从 Shape 到 Stride：为什么转置后 Tensor 会变成 Non-Contiguous?」正式发布，梳理 PyTorch tensor stride 与内存布局机制。",
+        tags: ["ai/learning", "tech/pytorch"]
+      },
+      {
+        time: "03/09",
+        title: "体测记录",
+        detail: "测量身高、体重、腰围，更新健康基线数据。",
+        tags: ["life/health"]
+      },
+      {
+        time: "03/10",
+        title: "期中试卷复盘",
+        detail: "Review 期中考试，整理学生共性问题。",
+        tags: ["academic/ta"]
+      },
+      {
+        time: "03/10",
+        title: "完成 AI 学习 01 项目文章",
+        detail: "AI 学习系列 01 项目全部文章完成，3 月 O3-KR1 目标提前达成。",
+        tags: ["ai/learning"]
+      },
+      {
+        time: "03/12",
+        title: "Zhiyuan 面试",
+        detail: "完成面试并深度复盘三个核心问题：传感器数据噪声处理策略、多目标优化（产量与能耗权衡）、RAG 项目个人贡献与训练原理。",
+        tags: ["life/job"]
+      }
+    ],
+    relatedArticles: []
   }
 ];
