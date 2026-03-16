@@ -92,7 +92,7 @@ export const monthlyOKRs: MonthlyOKR[] = [
             progress: [
               {
                 weekId: "2026-03-w2",
-                score: 0.33,
+                score: 0.3,
                 note: "Completed interview with Zhiyuan (3.12); reviewed sensor noise handling, multi-objective optimization, and RAG project deep-dives."
               }
             ]
