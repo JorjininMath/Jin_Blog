@@ -326,5 +326,140 @@ Other:
       }
     ],
     relatedArticles: []
+  },
+  {
+    id: "2026-03-w3",
+    title: "2026 年 03 月 · 第 3 周",
+    year: 2026,
+    month: 3,
+    week: 3,
+    dateRange: "03/16 - 03/22",
+    summary: "",
+    tags: [
+      "review/weekly",
+      "research/ckme-cp",
+      "life/job",
+      "interview/leetcode",
+      "ai/learning",
+      "life/health"
+    ],
+    highlights: [],
+    reflections: [],
+    thisWeekPlans: [
+      "CKME-CP 1.1: 完成量化估计（quantile estimation）理论章节撰写与实验",
+      "CKME-CP 1.2: 条件覆盖（conditional coverage）至少启动一次试验实验",
+      "CKME-CP 1.3: 产出 WSC（Winter Simulation Conference）12 页投稿版本",
+      "面试准备 2.1: 完成本周 LeetCode 题目集",
+      "面试准备 2.2: 练习京东（JD.com）面试代码题",
+      "求职 3.1: 本周投递不少于 30 个职位",
+      "AI 学习 4.1: 完成 PyTorch project 02 和 03",
+      "AI 学习 4.2: 复盘 RLHF 项目，尝试完成一次训练",
+      "AI 学习 4.3: 调研 AutoResearch 方向，整理资源与笔记",
+      "其他 5.1: 跟进研究生相关事项",
+      "其他 5.2: 完成报税",
+      "其他 5.3: 调研 OPT 申请时间线与材料清单",
+      "健身 6.1: 日均步数保持 7000+ 步",
+      "健身 6.2: 体重目标减少 0.5kg，腰围降至 32 英寸",
+      "健身 6.3: 完成燕帅琦课程第 1 周"
+    ],
+    plans: [],
+    events: [
+      {
+        time: "03/16 - 03/22",
+        title: "Job Applications — Week 3",
+        detail: `Target: ≥ 30 applications submitted this week.
+
+• (Add each application as you submit — format: Company — Role, Location. Status. Submitted YYYY-MM-DD.)`,
+        tags: ["life/job"]
+      },
+      {
+        time: "03/16 - 03/17",
+        title: "CKME-CP: Quantile estimation theory + experiments (KR1.1)",
+        detail: `Goal: add quantile estimation theory into current paper version and run supporting experiments.
+
+• Draft theory section: key definitions, lemmas, and connection to conformal prediction framework.
+• Run experiment round 1: quantile estimation across simulation settings.
+• Write summary of results into paper draft.`,
+        tags: ["research/ckme-cp"]
+      },
+      {
+        time: "03/18 - 03/19",
+        title: "CKME-CP: WSC 12-page version layout (KR1.3)",
+        detail: `Goal: produce a Winter Simulation Conference version of the paper within 12 pages.
+
+• Identify sections to trim or merge from current draft.
+• Restructure to fit 12-page budget while keeping all core contributions.
+• Export / share draft by end of Thursday.`,
+        tags: ["research/ckme-cp"]
+      },
+      {
+        time: "03/19",
+        title: "CKME-CP: Conditional coverage trial experiment (KR1.2)",
+        detail: `Goal: at least start a trial experiment for conditional coverage.
+
+• Design the experiment setup (data split, evaluation metric, method variant).
+• Run trial; capture results and open questions in research notes.`,
+        tags: ["research/ckme-cp"]
+      },
+      {
+        time: "03/16 - 03/20",
+        title: "LeetCode daily practice (KR3.1)",
+        detail: `Complete the assigned one-week LeetCode problem set — one session per day, 30–45 min each.
+
+Progress log:
+• Mon 03/16: [ ]
+• Tue 03/17: [ ]
+• Wed 03/18: [ ]
+• Thu 03/19: [ ]
+• Fri 03/20: [ ]`,
+        tags: ["interview/leetcode"]
+      },
+      {
+        time: "03/21",
+        title: "JD.com interview code practice (KR3.2)",
+        detail: `Dedicated session to JingDong interview-style coding problems. 1–2 hours, focused on typical algorithm patterns seen in JD screening rounds.`,
+        tags: ["interview/leetcode", "life/job"]
+      },
+      {
+        time: "03/20 - 03/21",
+        title: "PyTorch projects 02 and 03 (KR4.1)",
+        detail: `Complete PyTorch project 02 (Fri) and project 03 (Sat). Document key learnings in AI learning notes.`,
+        tags: ["ai/learning", "tech/pytorch"]
+      },
+      {
+        time: "03/21 - 03/22",
+        title: "RLHF project review and trial run (KR4.2)",
+        detail: `Review the existing RLHF project codebase and assess feasibility of running a successful training. Attempt at least one end-to-end run.`,
+        tags: ["ai/learning", "ai/llm"]
+      },
+      {
+        time: "03/20 - 03/22",
+        title: "AutoResearch topic survey (KR4.3)",
+        detail: `Explore the AutoResearch direction: collect relevant papers and tools, write a short summary (1-page or structured bullets) of the landscape and potential entry points.`,
+        tags: ["ai/learning"]
+      },
+      {
+        time: "03/18 - 03/19",
+        title: "Tax return + OPT + grad school admin",
+        detail: `Admin batch:
+• Graduate school: check pending items, identify upcoming deadlines, complete at least one action.
+• Tax return: complete and file by Thursday 03/19.
+• OPT: research timeline, list required documents, confirm next hard deadline.`,
+        tags: ["life/routine"]
+      },
+      {
+        time: "03/16 - 03/22",
+        title: "Fitness: steps + body composition + YanShuaiQi week 1",
+        detail: `Daily targets:
+• Steps: ≥ 7,000/day (use movement breaks between work blocks).
+• YanShuaiQi course: 1 session/day, Mon–Sun → complete Week 1 by Sunday.
+
+End-of-week check (03/22):
+• Weigh in and record weight (target: −0.5 kg vs last week).
+• Measure waist (target: 32 inches).`,
+        tags: ["life/health"]
+      }
+    ],
+    relatedArticles: []
   }
 ];

@@ -5,7 +5,7 @@ export const monthlyOKRs: MonthlyOKR[] = [
     id: "2026-03",
     year: 2026,
     month: 3,
-    theme: "Research execution and career momentum",
+    theme: "Research execution, career momentum, and capability building",
     objectives: [
       {
         id: "o1",
@@ -14,11 +14,11 @@ export const monthlyOKRs: MonthlyOKR[] = [
         keyResults: [
           {
             id: "o1-kr1",
-            title: "完成一版向刘老师汇报的研究 slides",
-            metric: "Slides deck completion",
-            target: "1 deck with current results and next-step plan",
-            current: "Outline drafted",
-            status: "on_track",
+            title: "完成量化估计（quantile estimation）理论章节与配套实验",
+            metric: "Theory section drafted + experiment rounds completed",
+            target: "Section drafted + >= 1 experiment round with summary",
+            current: "Not started",
+            status: "not_started",
             progress: [
               {
                 weekId: "2026-03-w1",
@@ -29,9 +29,9 @@ export const monthlyOKRs: MonthlyOKR[] = [
           },
           {
             id: "o1-kr2",
-            title: "完成 CDF consistency 与 conditional coverage 核心实验",
+            title: "完成 conditional coverage 试验实验并写下记录",
             metric: "Experiment rounds completed",
-            target: ">= 2 rounds with summary notes",
+            target: ">= 1 trial run with notes written",
             current: "Round 1 in progress",
             status: "on_track",
             progress: [
@@ -44,6 +44,15 @@ export const monthlyOKRs: MonthlyOKR[] = [
           },
           {
             id: "o1-kr3",
+            title: "产出 WSC 12 页投稿版本",
+            metric: "WSC draft page count",
+            target: "Draft <= 12 pages exported/shared",
+            current: "Not started",
+            status: "not_started",
+            progress: []
+          },
+          {
+            id: "o1-kr4",
             title: "每周形成一次研究推进记录",
             metric: "Weekly evidence count",
             target: ">= 4 weekly updates in March",
@@ -68,8 +77,8 @@ export const monthlyOKRs: MonthlyOKR[] = [
             id: "o2-kr1",
             title: "3 月新增投递数量达标",
             metric: "Applications submitted",
-            target: ">= 12",
-            current: "0/12",
+            target: ">= 60",
+            current: "0/60",
             status: "not_started",
             progress: []
           },
@@ -160,11 +169,105 @@ export const monthlyOKRs: MonthlyOKR[] = [
             ]
           }
         ]
+      },
+      {
+        id: "o4",
+        title: "保持面试编程能力热度",
+        why: "求职管道活跃，面试随时可能到来，编程手感必须持续维护。",
+        keyResults: [
+          {
+            id: "o4-kr1",
+            title: "完成每周 LeetCode 题目集",
+            metric: "Weekly problem sets completed",
+            target: ">= 3 weeks completed in March",
+            current: "0/3",
+            status: "not_started",
+            progress: []
+          },
+          {
+            id: "o4-kr2",
+            title: "完成公司专项练习（京东等）",
+            metric: "Company-specific practice sessions",
+            target: ">= 2 sessions",
+            current: "0/2",
+            status: "not_started",
+            progress: []
+          }
+        ]
+      },
+      {
+        id: "o5",
+        title: "推进 AI 项目动手能力，形成实验证据",
+        why: "项目完成度是简历可信度和面试深度的直接来源。",
+        keyResults: [
+          {
+            id: "o5-kr1",
+            title: "完成 PyTorch 项目 02 和 03",
+            metric: "Projects completed",
+            target: "Both project 02 and 03 done",
+            current: "0/2",
+            status: "not_started",
+            progress: []
+          },
+          {
+            id: "o5-kr2",
+            title: "复盘 RLHF 项目并完成一次训练尝试",
+            metric: "Training runs attempted",
+            target: ">= 1 end-to-end run with feasibility decision",
+            current: "Not started",
+            status: "not_started",
+            progress: []
+          },
+          {
+            id: "o5-kr3",
+            title: "调研 AutoResearch 方向并写出资源摘要",
+            metric: "Survey notes written",
+            target: "1-page summary or structured bullet notes",
+            current: "Not started",
+            status: "not_started",
+            progress: []
+          }
+        ]
+      },
+      {
+        id: "o6",
+        title: "维持健康基线，体重与体型可见改善",
+        why: "身体状态直接影响精力与专注力，健康是所有目标的底层保障。",
+        keyResults: [
+          {
+            id: "o6-kr1",
+            title: "日均步数保持 7000+ 步",
+            metric: "Daily step average",
+            target: ">= 7,000 steps/day average across March",
+            current: "Tracking",
+            status: "on_track",
+            progress: []
+          },
+          {
+            id: "o6-kr2",
+            title: "体重减少 0.5kg，腰围降至 32 英寸",
+            metric: "Weight and waist measurement",
+            target: "-0.5 kg and waist <= 32 inches by month end",
+            current: "Tracking",
+            status: "not_started",
+            progress: []
+          },
+          {
+            id: "o6-kr3",
+            title: "完成燕帅琦健身课程第 1 周",
+            metric: "Course sessions completed",
+            target: "Week 1 all sessions done",
+            current: "Not started",
+            status: "not_started",
+            progress: []
+          }
+        ]
       }
     ],
     nonOkrOps: [
       "OPT application timeline and document checklist",
-      "Graduate process admin tasks and deadline tracking"
+      "Graduate process admin tasks and deadline tracking",
+      "Tax return filing"
     ]
   }
 ];
